@@ -89,6 +89,69 @@ Angular 18
                             Signals, Deffered Views, Built-In Control Flows, function based routers
                             Angular Material and CDK are enhanced.
 
-         
+        TypeScript ?
+
+            TypeScript = Javascript + TypeSafty
+
+            Employee.js
+
+                class Employee {
+                    //........no fields can be declared
+                    constructor(empId,fullName,mailId,salary,isContrctBased){
+                        this.empId=empId;
+                        this.fullName=fullName;
+                        this.mailId=mailId;
+                        this.salary=salary;
+                        this.isContractBased=isContractBased;
+                    }
+
+                    hra(){
+                        return this.salary*0.12;
+                    }
+                }
+
+            Employee.ts
+
+                class Employee {
+                    
+                    private empId : number;
+                    private fullName : string;
+                    private mailId : string;
+                    private salary : number;
+                    private isContractBased : boolena;
+
+                    constructor(empId:number,fullName:string,mailId:string,salary:number,isContrctBased:boolean){
+                        this.empId=empId;
+                        this.fullName=fullName;
+                        this.mailId=mailId;
+                        this.salary=salary;
+                        this.isContractBased=isContractBased;
+                    }
+
+                    //bydefault public
+                    hra() : number {
+                        return this.salary*0.12;
+                    }
+                }                
+
+            TypeScript built-in data types
+                number
+                string
+                boolean
+                any             used to implement type-independent algorithms like sorting/searching ..etc.,
+                null            is assigned to an object that not referencing anything.
+                undefined       is the default value of any uninitialized variable.         
+                void            is used to indicate no-teturn on functions.
+
+
+                str1 : string;  //this str1 is not allowed to hold null or undefiend. and this is checked at compile time.
+                str2 !: string; //this str2 is not allowed to hold null or undefiend. but the compiler error is suppresed.
+                str3 ?: string; //this str3 is allowed to hold null or undefiend. 
+
+                itemId : number | string ; //this is called a union. itemId can be either a number or a string.
+
+        Node JS ?
+
+        Angular Archetecture 
 
 
