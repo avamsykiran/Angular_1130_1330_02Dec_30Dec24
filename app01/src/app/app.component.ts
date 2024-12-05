@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { LoanComponent } from './loan/loan.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports:[ WelcomeComponent ],
+  imports:[ WelcomeComponent, LoanComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

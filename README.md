@@ -379,4 +379,22 @@ Angular 18
                     
                 Style Binding
 
+                    allows us to control the css properties and css classes.
+
+                    <tag-name [style.cssProperty]="field" > content </tag-name>
+
+                    <p [style.fontSize.em]="x" > content </p>
+                    
+                    <tag-name [class.className]="booleanField" > content </tag-name>
+
+                    <p [class.highlight]="flag1" > content </p>
+
+                    <tag-name [ngStyle]="jsonObject" > content </tag-name>
+                        this jsonObject msut contain the css properties as keys mapped to their valeus.
+                    
+                    <tag-name [ngClass]="jsonObject" > content </tag-name>
+                        this jsonObject msut contain the css-class-names as keys mapped to true/false as values.
+
+
+
         

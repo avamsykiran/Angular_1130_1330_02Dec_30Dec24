@@ -1,0 +1,18 @@
+<section class="box">
+    <h3>Loan Component</h3>
+    
+    <form>
+        <div>
+            <label> Loan Amount: <input type="number" name="amt" [(ngModel)]="loanAmt" /> </label> 
+        </div>
+        <div>
+            <label> Rate Of Interest: <input type="decimal" name="r" [(ngModel)]="roi" /> </label> 
+        </div>
+        <div>
+            <label> Term (in months): <input type="number" name="t" [(ngModel)]="term" /> </label> 
+        </div>
+        <button type="button" (click)="loadData()"> RESET </button>
+    </form>
+
+    <p> Simpkle Interest: <strong> {{ loanAmt*roi*term/100 }} </strong> </p>
+</section>
