@@ -1,0 +1,15 @@
+<section class="box">
+    <h3>Welcome Component</h3>
+
+    <div>
+        <img [src]="logos[logoIndex]" (click)="changeLogo()" />
+    </div>
+
+    <form>
+        <label>
+            <strong>Whats your name?</strong> <br />
+            <input type="text" name="unm" [(ngModel)]="userName" />
+        </label>
+    </form>
+    <p> Hello <strong>{{userName}}</strong>! We are happy to have you here! </p>
+</section>

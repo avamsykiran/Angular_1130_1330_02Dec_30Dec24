@@ -322,3 +322,61 @@ Angular 18
                 class InvestmentsModule{
 
                 }
+
+    Angular Components
+
+        A component is a custom element.
+
+        Each component has three parts
+            a component class           .component.ts       state and behavior
+            a component tmeplate        .component.html     html-dom
+            a component style sheet     .component.css      
+
+        ng g c ComponentName --skip-tests
+
+        Data Binding
+
+            is a machanisim to access the variables and method of a component class
+            in that component template.
+
+            Interpolation
+                is used to render the value of any angular expression in the content of a dom-element.
+
+                <tag-name> {{ expression }} </tag-name>
+
+                <h3> {{title}} </h3>
+
+            Two-Way Data Binding
+
+                is used to map the value of a input element to a field.
+
+                <input [(ngModel)]="field" />
+
+                'ngModel' is defined in FormsModule
+
+            One Way Data Binding
+                Attribute Binding
+                    is used to bind a field to an attribute.
+
+                    <tag-name [attribute-name]="field"> content </tag-name>
+
+                    <p [width]="x"> </p>
+                    
+                Event Binding
+                    is used to map a method to a event directive.
+
+                    html-event-attribute        event-directives
+                        onclick                     click
+                        onfocus                     focus
+                        onblur                      blur
+                        onchange                    change
+                        onsubmit                    submit / ngSubmit
+                        ..etc.,
+
+                    <tag-name (event-directive)="method()" >content </tag-name>
+
+                    <button (click)="doSomethingWhenButtonClicked()">Click Me</button>
+                    
+                Style Binding
+
+        
