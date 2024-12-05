@@ -395,6 +395,13 @@ Angular 18
                     <tag-name [ngClass]="jsonObject" > content </tag-name>
                         this jsonObject msut contain the css-class-names as keys mapped to true/false as values.
 
+        Data Exchange between a parent and child component
 
+            A pernet can pass any object or primitve value or even a function to a child component
+            through a component attribute.
+
+            A component can an attribute for itself by marking a field with @Input() decorator.
+
+        
 
         
