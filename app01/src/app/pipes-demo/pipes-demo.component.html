@@ -1,0 +1,52 @@
+<section class="box">
+    <h3>String Related Pipes Demo</h3>
+
+    <div><strong>Original: </strong> {{str}} </div>
+    <div><strong>lowercase: </strong> {{str|lowercase}} </div>
+    <div><strong>uppercase: </strong> {{str|uppercase}} </div>
+    <div><strong>titlecase: </strong> {{str|titlecase}} </div>
+    <div><strong>slice on 4 and 14: </strong> {{str|slice:4:14}} </div>
+</section>
+
+<section class="box">
+    <h3>Currency Pipe Demo</h3>
+
+    <div><strong>Original: </strong> {{num}} </div>
+    <div>{{num|currency:'INR'}}</div>
+    <div>{{num|currency:'USD'}}</div>
+    <div>{{num|currency:'GBP'}}</div>
+    <div>{{num|currency:'JPY'}}</div>
+    <div>{{num|currency:'AUD'}}</div>
+    <div>{{num|currency:'XYZ'}}</div>
+</section>
+
+<section class="box">
+    <h3>Number Pipe Demo</h3>
+
+    <div><strong>Original: </strong> {{num}} </div>
+    <div>{{num|number:'10.10'}}</div>
+    <div>{{num|number:'2.0-0'}}</div>
+    <div>{{num|number:'2.3-5'}}</div>
+    <div>{{num|number:'2.3-3'}}</div>
+</section>
+
+
+<section class="box">
+    <h3>Date Pipe Demo</h3>
+
+    <div><strong>Original: </strong> {{dt}} </div>
+    <div>{{dt|date:'short'}}</div>
+    <div>{{dt|date:'long'}}</div>
+    <div>{{dt|date:'dd-MM-yy'}}</div>
+    <div>{{dt|date:'dd-MMM-yyyy'}}</div>
+    <div>{{dt|date:'dd-MMMM-yyyy'}}</div>
+    <div>{{dt|date:'dd-MM-yy hh:mm:ss aa'}}</div>
+    <div>{{dt|date:'dd-MM-yy HH:mm:ss '}}</div>
+</section>
+
+<section class="box">
+    <h3>'InWords' Custom Pipe Demo</h3>
+
+    <div><strong>Original: </strong> {{num}} </div>
+    <div>{{num|inWords}}</div>
+</section>

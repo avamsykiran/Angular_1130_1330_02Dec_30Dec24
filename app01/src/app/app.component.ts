@@ -3,11 +3,12 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { LoanComponent } from './loan/loan.component';
 import { TitleFormComponent } from './title-form/title-form.component';
 import { DirectivesDemoComponent } from './directives-demo/directives-demo.component';
+import { PipesDemoComponent } from './pipes-demo/pipes-demo.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports:[ WelcomeComponent, LoanComponent, TitleFormComponent, DirectivesDemoComponent ],
+  imports:[ WelcomeComponent, LoanComponent, TitleFormComponent, DirectivesDemoComponent, PipesDemoComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -526,3 +526,36 @@ Angular 18
                         <p> No such day </p>
                     }
                 }
+
+    Angular Pipes
+
+        is used to transform a value before rendering.
+
+        <tag-name> {{ expr|pipeName:pipeParams }}  </tag-name>
+
+        built-in pipes
+
+            lowercase
+            uppercase
+            titlecase
+            slice
+            number
+            percent
+            date
+            currency
+            json
+            async
+
+        custom pipe
+
+            ng g pipe PipeName --skip-tests
+
+    Angular Services
+
+        is a class that provide bussiness logic like computations / rest-api calls ...etc.,
+
+        these services are injectables. that means we have to declare an object of a service in the 
+        constructor of a component or a pipe or a directive or even another service, the object is injected by the 
+        angular injectors.
+
+        ng g service ServiceName --skip-tests

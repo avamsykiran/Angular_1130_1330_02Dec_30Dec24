@@ -6,3 +6,57 @@
     <section appHighlight> This is a section </section>
     <p [appHighlight]="{ bgColor:'#ff0000',fgColor:'#00ffff'}"> This is another para </p>
 </section>
+
+<section class="box">
+    <h3>Structral Directives Demo </h3>
+
+    <ol *ngIf="friends && friends.length>0">        
+        <li *ngFor="let f of friends; index as i"> 
+            {{f}}
+            <button type="button" (click)="removeFriend(i)"> X </button>
+        </li>
+    </ol>
+
+    <p *ngIf="!friends || friends.length===0"> NO RECORDS TO DISPLAY </p>
+
+    <form (ngSubmit)="addFriend()">
+        <label>
+            Friend Name: <input type="text" [(ngModel)]="friendName" name="fnm" />
+        </label>
+        <button>ADD</button>
+    </form>
+</section>
+
+<section class="box">
+    <h3>Built-in Control Flows </h3>
+    <!--
+    <ol>
+        @for(f of friends; track $index; let i = $index){
+            <li> {{f}}  
+                <button type="button" (click)="removeFriend(i)" > X </button> 
+            </li>
+        } @empty {
+            <li> NO RECORDS TO DISPLAY </li>
+        }
+    </ol>
+    -->
+
+    @if (friends && friends.length>0) {
+    <ol>
+        @for(f of friends; track $index; let i = $index){
+        <li> {{f}}
+            <button type="button" (click)="removeFriend(i)"> X </button>
+        </li>
+        }
+    </ol>
+    }@else {
+    <p> NO RECORDS TO DISPLAY </p>
+    }
+
+    <form (ngSubmit)="addFriend()">
+        <label>
+            Friend Name: <input type="text" [(ngModel)]="friendName" name="fnm" />
+        </label>
+        <button>ADD</button>
+    </form>
+</section>
