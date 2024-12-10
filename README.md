@@ -261,8 +261,8 @@ Angular 18
 
             An angular application is made up of a variety of artifacts called:
 
-                Components
                 Directives
+                Components
                 Pipes
                 Services
                 Modules
@@ -323,7 +323,16 @@ Angular 18
 
                 }
 
-    Angular Components
+    Angular Directives
+
+        a directive is a custom html element or attribute.
+
+        We have three types of directives
+            1. Component Directives / Components
+            2. Attribute Directives / Directives
+            3. Structural Directives
+
+    Angular Component Directives / Components
 
         A component is a custom element.
 
@@ -395,7 +404,7 @@ Angular 18
                     <tag-name [ngClass]="jsonObject" > content </tag-name>
                         this jsonObject msut contain the css-class-names as keys mapped to true/false as values.
 
-        Data Exchange between a parent and child component
+        Data Exchange between a parent and a child component
 
             A pernet can pass any object or primitve value or even a function to a child component
             through a component attribute.
@@ -403,5 +412,117 @@ Angular 18
             A component can an attribute for itself by marking a field with @Input() decorator.
 
         
+    Angular Attribute Directives / Directives
 
+        is a custom attribute to be used on any html element or angular component.
+
+        Built-in Attribute Directives:
+
+            ngModel, ngForm ..etc., from FormsModule
+            ngStyle, ngClass ..etc., from CommonModule
+            and many more
+
+        Custom Directive
+
+            ng g directive DirectiveName --skip-tests
+
+            @Input()            decorator is used to receive a value into the directive
+            @HostListener()     decorator is used to handle any events on the element on which the directive is applied.
+
+
+    Angular Structural Directives
+
+        a structural directive can control the repetition or display of an element
+
+        CommonModule
+            NgIf            
+            NgFor
+            NgSwitch
+
+        <ng-template ngIf="booleanExpression">
+            <p> This para will appear only if the booleanExpression evaluates to true </p>
+        </ng-template>
+
+        <p *ngIf="booleanExpression"> This para will appear only if the booleanExpression evaluates to true </p>
+
+        <ng-template ngFor="let x of array">
+            <p> This para will appear once for each element in the array, the current value is : {{x}} </p>
+        </ng-template>
+
+        <p *ngFor="let x of array"> This para will appear once for each element in the array, the current value is : {{x}} </p>
         
+    Angular Built-in Control Flows
+
+        this is a enhanced alternative to Strucutral Directives and their usage does not demand any module to be imported.
+
+            @if
+
+                @if( condition ){
+                    <p> This para will appear only if the cond evaluates to true </p>
+                }
+
+                @if( condition ){
+                    <p> This para will appear only if the cond evaluates to true </p>
+                } @else {
+                    <p> This para will appear only if the cond evaluates to false </p>
+                }
+
+                @if( condition1 ){
+                    <p> This para will appear only if the cond1 evaluates to true </p>
+                }@else if( condition2 ){
+                    <p> This para will appear only if the cond2 evaluates to true </p>
+                } @else {
+                    <p> This para will appear only if all the conds evaluate to false </p>
+                }
+
+            @for
+
+                @for( ele of array; track $index ){
+                    <li> {{ele}} </li>
+                }@empty{
+                    <p>The array is empty</p>
+                }
+
+                $count
+                #index
+                $even
+                $odd
+                $first
+                $last
+
+                @for(emp of employees; track emp.id; let isEven=$even){
+                    <p [classes.bordered]="isEven">
+                        {{emp.fullName}} earns a salary of rupees {{emp.sal}}
+                    </p>
+                }@empty{
+                    <p>The array is empty</p>
+                }
+
+            @switch
+
+                @switch(day){
+                    @case (1) {
+                        <p> This is a sunday </p>
+                    }
+                    @case (2) {
+                        <p> This is a monday </p>
+                    }
+                    @case (3) {
+                        <p> This is a tuesday </p>
+                    }
+                    @case (4) {
+                        <p> This is a wednesday </p>
+                    }
+                    @case (5) {
+                        <p> This is a thursday </p>
+                    }
+                    @case (6) {
+                        <p> This is a friday </p>
+                    }
+                    @case (7) {
+                        <p> This is a satday </p>
+                    }
+                    @default {
+                        <p> No such day </p>
+                    }
+                }
