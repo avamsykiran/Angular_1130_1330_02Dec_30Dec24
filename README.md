@@ -559,3 +559,70 @@ Angular 18
         angular injectors.
 
         ng g service ServiceName --skip-tests
+
+    Integrating Bootstrap
+
+        npm i bootstrap
+
+        node_modules
+            |-bootstrap
+                |-dist
+                    |-css
+                        |-bootstrap.min.css     include in 'styles' section of angular.json
+                    |-js
+                        |-bootstrap.min.js      include in 'scripts' section of angular.json
+
+    Angular Models
+
+        we use typescript interfaces to model domain objects.
+
+        ng g interface ModelName 
+
+    Angular Routing
+
+        Routing is to enable navigation from one component to another.
+
+        RouterModule        @angular/router
+
+            provideRouter   will enable routing and takes an array of Route Objects
+
+            Route           is a model
+
+                            {
+                                path:'urlToMapToAComponent',
+                                component:ComponentToBeMappedToTheUrl,
+                                redirectTo:'urlToRedirectTo',
+                                pathMatch:'startsWith | full'
+                            }
+
+                            pathMatch decides on hwo to match the incoming url with the paths.
+
+                            {path:"abc",component:DashboardComponent}
+
+                            http://localhost:9090/abc               will make the DashboardComponent appear
+                            http://localhost:9090/abc/xys           will make the DashboardComponent appear
+                            http://localhost:9090/abc/pqr           will make the DashboardComponent appear
+                            http://localhost:9090/abc/xyz/pqr       will make the DashboardComponent appear
+
+                            {path:"abc",component:DashboardComponent,pathMatch:'full'}
+
+                            http://localhost:9090/abc               will make the DashboardComponent appear
+                            http://localhost:9090/abc/xys           will not make the DashboardComponent appear
+                            http://localhost:9090/abc/pqr           will not make the DashboardComponent appear
+                            http://localhost:9090/abc/xyz/pqr       will not make the DashboardComponent appear
+
+            Routes          An alias type for Route[]
+
+            router-outlet   Is a builtIn component, that reserve place for a routed component in the top-level root component.
+
+                            app.component.html
+                                <app-header></app-header>
+                                <router-outlet></router-outlet>
+                                <app-footer></app-footer>
+                            
+            routerLink          Is a built-in attribute directive used on 'a' tag instead of its href attribute.
+
+            routerLinkActive    Is a built-in attribute directive used on 'a' tag. It holds a css class and applies that class
+                                on the 'a' element only when it is currently active.
+
+
