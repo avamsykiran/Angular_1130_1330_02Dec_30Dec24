@@ -625,4 +625,31 @@ Angular 18
             routerLinkActive    Is a built-in attribute directive used on 'a' tag. It holds a css class and applies that class
                                 on the 'a' element only when it is currently active.
 
+    Angular Forms
+
+        Template Driven Forms
+
+            A template driven is structred and managed in the template using FormsModule.
+
+            Each control in such form is two-way boudn to a field of the component using NgModel directive.
+
+            These forms are good enough for simpler forms that may ahve not more than oen or two controls.
+            They are not recommeded for complex forms or nested forms.
+            These forms are complex to test.
+
+        Model Driven Forms / Reactive Forms
+
+            A model driven form or a reactive form is structured in the template but modled and managed in the component class using
+            ReactiveFormsModule. A model of the form is constructed using a FormGroup where a FormGroup is a group of
+            FormControls, where each FormControl can have a default value and an array of validators.
+
+            FormControl themselves will track the values , no need to two-way bind with any field.
+
+            These forms are used almost everywhere in an Angular app, unless the form is pretty simple.
+            These forms support custom validators are also are recommended to handle nested forms.
+            These forms are simpel to test as they are constructed in TypeScript not using html.
+
+    RxJS Observables
+
+        
 
