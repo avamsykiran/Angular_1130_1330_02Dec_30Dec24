@@ -1,0 +1,28 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "fullName": "Vamsy",
+      "mobile": "9999999999",
+      "mailId": "vamsy@gmail.com"
+    },
+    {
+      "id": 2,
+      "fullName": "Murthy",
+      "mobile": "9999999991",
+      "mailId": "murthy@gmail.com"
+    },
+    {
+      "id": 3,
+      "fullName": "Suresh",
+      "mobile": "9999999992",
+      "mailId": "suresh@gmail.com"
+    },
+    {
+      "id": 4,
+      "fullName": "Sagar",
+      "mobile": "1231231231",
+      "mailId": "sagar@gmail.com"
+    }
+  ]
+}

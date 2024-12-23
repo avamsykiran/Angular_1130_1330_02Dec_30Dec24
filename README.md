@@ -651,5 +651,108 @@ Angular 18
 
     RxJS Observables
 
-        
+        RxJs is a javascript library for reactive programming.
 
+        Observable is a class that is an enhanced Promise offered by RxJS.
+
+        Observable is used to manage the results and errors from an asynchronous operation by a UI. A UI
+        gets notified by an observable whenever an underlying asynchronous operation emits a result or an error.
+
+        var bgJob = observer => {
+
+            observer.next( result ); //used to emit results
+            observer.error( errMsg ); //used to raise an error
+            observer.complete(); //used to signal the compeltion of the job
+
+         };
+        
+        var ob = new Observable( bgJob );
+
+        //on subscribing to the observble the bgJob gets invoked.
+        ob.subscribe({
+            next: result => {},
+            error: err => {},
+            complete: () => {}
+        });
+
+        Observable can emit any number of results continously until the job is complete unlike Promise
+        Observable can be subscribed any number ot times parallelly unlike Promise.
+        Observable once subscribed can be unsubcribed too even before the job is complete unlike Promise.
+
+    Creating Fake Rest-api using json-server
+
+        md adb-api
+        cd adb-api
+        npm init -y
+        npm i json-server@0.17.4
+
+        create a '.json' file in the root of the project to hold hypothetical data adb-api/data.json
+
+        in package.json, "start":"json-server --watch ./data.json --port 9191"
+
+        npm start
+
+        will luanch the rest-api.
+        
+    HttpClientModule to consume the rest-api
+
+        HttpClient
+            get(url) : Observable
+            post(url,reqBody) : Observable
+            put(url,reqBody) : Observable
+            delete(url) : Observable
+
+        provideHttpClient()     will config., a provider for HttpClient.
+
+    Angular Component Content
+
+        <app-component-a>
+            <!-- any thing that is written here is called a content -->
+            <p> This para is called ContentChild of ComponentA. </p>
+        </app-component-a>
+
+    Angular Component View
+
+        All the DOM written in the template of a component is called its view.
+
+        component-a.component.html        
+
+            <!-- any thing that is written here is called a view -->
+            <p> This para is called ViewChild of ComponentA. </p>
+            <ng-content></ng-content> <!-- here the ng-content is repalced with the content -->
+
+    Angular Life Cycle Hooks
+
+        This is for the first time
+
+            constructor()
+                ↓
+                ngOnChanges()                                fires following the modification of @Input bound class members.
+                    ↓
+                    ngOnInit()                               fires once upon initialization of a component's fields. 
+                        ↓
+                        ngDoCheck()                          fires with every change detection cycle.
+                            ↓
+                            ngAfterContentInit()             fires after the component’s content DOM initializes 
+                                ↓
+                                ngAfterContentChecked()      fires after every cycle of change detection targeting the content DOM. 
+                                    ↓
+                                    ngAfterViewInit()        fires once after the view DOM finishes initializing. 
+                                        ↓
+                                        ngAfterViewChecked() fires after any change detection cycle targeting the component’s view.
+
+        Each time any input-bound fields change is detected
+            
+            ngOnChanges()
+                ↓
+                ngDoCheck()
+
+        Each time any content change is detected                 
+            ngAfterContentChecked()
+        
+        Each time any view change is detected                 
+            ngAfterViewChecked()
+
+        After a component is removed fronm its parent's view
+            ngOnDestroy()
+            
