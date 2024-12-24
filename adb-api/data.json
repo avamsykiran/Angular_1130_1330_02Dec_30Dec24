@@ -17,12 +17,38 @@
       "fullName": "Suresh",
       "mobile": "9999999992",
       "mailId": "suresh@gmail.com"
+    }
+  ],
+  "tasks":[
+    {
+      "id":1,
+      "job":"Pay Internet Bill",
+      "status":"DONE",
+      "owner":1
     },
     {
-      "id": 4,
-      "fullName": "Sagar",
-      "mobile": "1231231231",
-      "mailId": "sagar@gmail.com"
+      "id":2,
+      "job":"Pay Car EMI",
+      "status":"PENDING",
+      "owner":1
+    },
+    {
+      "id":3,
+      "job":"Pay Mobile Bill",
+      "status":"PENDING",
+      "owner":1
+    },
+    {
+      "id":4,
+      "job":"Pay House Rent",
+      "status":"PENDING",
+      "owner":2
+    },
+    {
+      "id":5,
+      "job":"Open an FD Account",
+      "status":"PENDING",
+      "owner":2
     }
   ]
 }

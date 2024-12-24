@@ -756,3 +756,24 @@ Angular 18
         After a component is removed fronm its parent's view
             ngOnDestroy()
             
+    Angular Modules
+
+        A module helps to group a commonly oriented set of components, directives, pipes
+        and services together.
+
+        All the resource of the module are visible and accessble from one another another
+        without individual imports.
+
+        To generate a module
+            ng g module ModuleNAme
+
+        To generate a component inside a module
+            ng g c module-name/ComponentName --no-standalone --module module-name --skip-tests
+        
+        To generate a directive inside a module
+            ng g directive module-name/DirectiveName --no-standalone --module module-name --skip-tests
+        
+        To generate a pipe inside a module
+            ng g pipe module-name/PipeName --no-standalone --module module-name --skip-tests
+
+        

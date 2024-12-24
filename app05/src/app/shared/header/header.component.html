@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a routerLink="/" class="navbar-brand"> {{ brand ?? "Untitled" }} </a>
+        <ul class="navbar-nav mb-0 mb-lg-0 me-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/contacts" routerLinkActive="active" >Contacts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/addContact" routerLinkActive="active" >New Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
