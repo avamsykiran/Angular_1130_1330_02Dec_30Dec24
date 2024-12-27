@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Task } from '../models/task';
 
 @Component({
   selector: 'app-task-row',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class TaskRowComponent {
 
+  @Input()
+  t!:Task
+
+  @Input()
+  delete!:(id:number) => void;
+
+  @Input()
+  edit!:(id:number) => void;
 }

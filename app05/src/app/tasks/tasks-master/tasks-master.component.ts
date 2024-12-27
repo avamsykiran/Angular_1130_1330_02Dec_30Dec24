@@ -47,14 +47,14 @@ export class TasksMasterComponent {
     }
   }
 
-  add(task:Task){
+  add = (task:Task) => {
     this.tasksService.add(task).subscribe({
       next: task => this.tasks.push(task),
       error: err => { console.error(err); this.errMsg = "Unable to save tasks! Please retry later!" }
     })
   }
   
-  update(task:Task){
+  update = (task:Task) => {
     this.tasksService.update(task).subscribe({
       next: task => { 
         let index = this.tasks.findIndex(t => t.id===task.id); 
@@ -64,7 +64,7 @@ export class TasksMasterComponent {
     })
   }
   
-  delete(id:number){
+  delete = (id:number) => {
     this.tasksService.deleteById(id).subscribe({
       next: () => { 
         let index = this.tasks.findIndex(t => t.id===id); 
@@ -72,5 +72,19 @@ export class TasksMasterComponent {
       },
       error: err => { console.error(err); this.errMsg = "Unable to save tasks! Please retry later!" }
     })
+  }
+
+  edit = (id:number) => {
+    let index = this.tasks.findIndex(t => t.id===id);
+    if(index>-1){
+      this.tasks[index].isEditable=true;
+    }
+  }
+
+  cancelEdit = (id:number) => {
+    let index = this.tasks.findIndex(t => t.id===id);
+    if(index>-1){
+      this.tasks[index].isEditable=undefined;
+    }
   }
 }

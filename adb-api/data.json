@@ -19,36 +19,42 @@
       "mailId": "suresh@gmail.com"
     }
   ],
-  "tasks":[
+  "tasks": [
     {
-      "id":1,
-      "job":"Pay Internet Bill",
-      "status":"DONE",
-      "owner":1
+      "id": 1,
+      "job": "Pay Internet Bill",
+      "status": "DONE",
+      "owner": 1
     },
     {
-      "id":2,
-      "job":"Pay Car EMI",
-      "status":"PENDING",
-      "owner":1
+      "id": 2,
+      "job": "Pay Car EMI",
+      "status": "DONE",
+      "owner": 1
     },
     {
-      "id":3,
-      "job":"Pay Mobile Bill",
-      "status":"PENDING",
-      "owner":1
+      "id": 3,
+      "job": "Pay Mobile Bill",
+      "status": "PENDING",
+      "owner": 1
     },
     {
-      "id":4,
-      "job":"Pay House Rent",
-      "status":"PENDING",
-      "owner":2
+      "id": 4,
+      "job": "Pay House Rent",
+      "status": "PENDING",
+      "owner": 2
     },
     {
-      "id":5,
-      "job":"Open an FD Account",
-      "status":"PENDING",
-      "owner":2
+      "id": 5,
+      "job": "Open an FD Account",
+      "status": "PENDING",
+      "owner": 2
+    },
+    {
+      "id": 6,
+      "job": "Plan Marrage Day Anniversary",
+      "status": "PENDING",
+      "owner": 3
     }
   ]
 }

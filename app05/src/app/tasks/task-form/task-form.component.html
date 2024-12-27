@@ -1,1 +1,18 @@
-<p>task-form works!</p>
+<form class="row border-bottom p-2" [formGroup]="taskForm" (ngSubmit)="formSubmitted()">
+    <div class="col-2">
+        <input type="number" class="form-control" readonly formControlName="id"/>
+    </div>    
+    <div class="col">
+        <input type="text" class="form-control" formControlName="job" />
+    </div>    
+    <div class="col-2">
+        <select class="form-control" formControlName="status">
+            <option value="PENDING">PENDING</option>
+            <option value="DONE">DONE</option>
+        </select>
+    </div>    
+    <div class="col-2">
+        <button class="btn btn-sm btn-primary me-1">SAVE</button>
+        <button type="button" class="btn btn-sm btn-danger" (click)="cancel()">CANCEL</button>
+    </div>    
+</form>

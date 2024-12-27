@@ -776,4 +776,17 @@ Angular 18
         To generate a pipe inside a module
             ng g pipe module-name/PipeName --no-standalone --module module-name --skip-tests
 
-        
+    What Else/ Whats Next?
+
+        (a) Router Guards and Http Interceptors
+        (b) Lazy Loading
+        (c) Angular Material
+
+        (d) Signals
+        (e) State Management using NgRx Signal Store
+        (f) Defered Views using @defer
+        (g) Server Side Rendering and Server Side Generation
+        (h) Internationalization and Localization
+        (i) Zoneless Change Detection and Change Detection Stretagies
+
+    

@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
 import { Task } from '../models/task';
 
 @Injectable({
-  //providedIn: TasksModule
-  providedIn: 'root'
+  //providedIn: 'root'
+  providedIn: 'any'
 })
 export class TasksService {
 

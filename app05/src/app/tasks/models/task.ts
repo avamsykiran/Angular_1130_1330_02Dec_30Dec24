@@ -3,4 +3,5 @@ export interface Task {
     job:string,
     status:"DONE"|"PENDING";
     owner:number;
+    isEditable?:boolean;
 }
